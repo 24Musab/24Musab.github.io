@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My  Portfolio</title>
+    <!-- Use Google Fonts for the 'Inter' font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Load Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            color: #1f2937;
+        }
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #e5e7eb;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #9ca3af;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6b7280;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-900">
+                <span class="text-indigo-600">My</span>Portfolio
+            </a>
+            <ul class="hidden md:flex space-x-6 font-medium">
+                <li><a href="#about" class="text-gray-600 hover:text-indigo-600 transition duration-300">About</a></li>
+                <li><a href="#skills" class="text-gray-600 hover:text-indigo-600 transition duration-300">Skills</a></li>
+                <li><a href="#projects" class="text-gray-600 hover:text-indigo-600 transition duration-300">Projects</a></li>
+                <li><a href="#contact" class="text-gray-600 hover:text-indigo-600 transition duration-300">Contact</a></li>
+            </ul>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden p-2 text-gray-600 rounded-lg hover:bg-gray-100 transition duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <ul class="flex flex-col space-y-2 p-4 font-medium">
+                <li><a href="#about" class="block py-2 px-4 rounded-md hover:bg-gray-100 transition duration-300">About</a></li>
+                <li><a href="#skills" class="block py-2 px-4 rounded-md hover:bg-gray-100 transition duration-300">Skills</a></li>
+                <li><a href="#projects" class="block py-2 px-4 rounded-md hover:bg-gray-100 transition duration-300">Projects</a></li>
+                <li><a href="#contact" class="block py-2 px-4 rounded-md hover:bg-gray-100 transition duration-300">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-10">
+
+        <!-- Hero Section -->
+        <section class="text-center py-16 md:py-24" id="hero">
+            <div class="flex flex-col items-center">
+                <img class="w-32 h-32 rounded-full object-cover mb-6 border-4 border-indigo-200" src="https://placehold.co/128x128/9CA3AF/FFFFFF?text=Photo" alt="Your Photo">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-2">
+                    Hi, I'm <span class="text-indigo-600">Musab</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-600 font-medium mb-8">
+                    A Passionate AI & ML Engineer
+                </p>
+                <a href="#contact" class="bg-indigo-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-indigo-700 transition duration-300 transform hover:scale-105">
+                    Contact Me
+                </a>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section class="bg-white rounded-2xl shadow-lg p-8 md:p-12 mb-10" id="about">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">About Me</h2>
+            <p class="text-gray-700 leading-relaxed text-lg">
+                I am a passionate and results-driven web developer with a strong foundation in modern web technologies. With 5 years of experience, I specialize in building responsive, user-friendly, and performant web applications. My expertise lies in front-end development using frameworks like React and Vue, as well as back-end systems with Node.js and Python. I love turning complex problems into simple, beautiful, and intuitive designs.
+            </p>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="bg-white rounded-2xl shadow-lg p-8 md:p-12 mb-10" id="skills">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">My Skills</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 text-center">
+                <!-- Skill 1: HTML -->
+                <div class="flex flex-col items-center p-4 rounded-lg bg-gray-100 hover:bg-gray-200 transition duration-300">
+                    <svg class="w-16 h-16 mb-2 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                    </svg>
+                    <p class="font-semibold text-lg text-gray-700">SQL</p>
+                </div>
+                <!-- Skill 2: CSS -->
+                <div class="flex flex-col items-center p-4 rounded-lg bg-gray-100 hover:bg-gray-200 transition duration-300">
+                    <svg class="w-16 h-16 mb-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21a9 9 0 009-9H3a9 9 0 009 9z"></path>
+                    </svg>
+                    <p class="font-semibold text-lg text-gray-700">CSS3</p>
+                </div>
+                <!-- Skill 3: JavaScript -->
+                <div class="flex flex-col items-center p-4 rounded-lg bg-gray-100 hover:bg-gray-200 transition duration-300">
+                    <svg class="w-16 h-16 mb-2 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                    <p class="font-semibold text-lg text-gray-700">JavaScript</p>
+                </div>
+                <!-- Skill 4: React -->
+                <div class="flex flex-col items-center p-4 rounded-lg bg-gray-100 hover:bg-gray-200 transition duration-300">
+                    <svg class="w-16 h-16 mb-2 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+                    </svg>
+                    <p class="font-semibold text-lg text-gray-700">React</p>
+                </div>
+                <!-- Skill 5: Node.js -->
+                <div class="flex flex-col items-center p-4 rounded-lg bg-gray-100 hover:bg-gray-200 transition duration-300">
+                    <svg class="w-16 h-16 mb-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18.75l-6-3.75V9.75l6-3.75 6 3.75v5.25l-6 3.75z"></path>
+                    </svg>
+                    <p class="font-semibold text-lg text-gray-700">Node.js</p>
+                </div>
+                <!-- Skill 6: Python -->
+                <div class="flex flex-col items-center p-4 rounded-lg bg-gray-100 hover:bg-gray-200 transition duration-300">
+                    <svg class="w-16 h-16 mb-2 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v18M19 3v18M8 6h8a2 2 0 012 2v8a2 2 0 01-2 2H8a2 2 0 01-2-2V8a2 2 0 012-2z"></path>
+                    </svg>
+                    <p class="font-semibold text-lg text-gray-700">Python</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="mb-10" id="projects">
+            <h2 class="text-3xl font-bold text-gray-800 text-center mb-8">My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Project Card 1 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img class="w-full h-48 object-cover" src="https://placehold.co/600x400/1e293b/FFFFFF?text=Project+1" alt="Project 1">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Project Title One</h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            A brief description of the project. Mention the technologies used and the key features.
+                        </p>
+                        <a href="#" class="inline-block text-indigo-600 font-semibold hover:underline">
+                            View Project &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img class="w-full h-48 object-cover" src="https://placehold.co/600x400/1e293b/FFFFFF?text=Project+2" alt="Project 2">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Project Title Two</h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            A brief description of the project. Mention the technologies used and the key features.
+                        </p>
+                        <a href="#" class="inline-block text-indigo-600 font-semibold hover:underline">
+                            View Project &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img class="w-full h-48 object-cover" src="https://placehold.co/600x400/1e293b/FFFFFF?text=Project+3" alt="Project 3">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Project Title Three</h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            A brief description of the project. Mention the technologies used and the key features.
+                        </p>
+                        <a href="#" class="inline-block text-indigo-600 font-semibold hover:underline">
+                            View Project &rarr;
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="bg-white rounded-2xl shadow-lg p-8 md:p-12" id="contact">
+            <h2 class="text-3xl font-bold text-gray-800 text-center mb-6">Get In Touch</h2>
+            <div class="flex justify-center mb-8">
+                <a href="mailto:youremail@example.com" class="bg-indigo-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-indigo-700 transition duration-300 transform hover:scale-105">
+                    Send me an email
+                </a>
+            </div>
+            <div class="flex justify-center space-x-6">
+                <!-- Social Media Links (replace with your own) -->
+                <a href="#" class="text-gray-500 hover:text-indigo-600 transition duration-300">
+                    <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 2.163c3.204 0 3.584.013 4.858.072 1.343.061 2.396.284 3.25.64.914.385 1.65.927 2.396 1.674 1.25.748 1.8 1.484 2.186 2.398.355.854.577 1.907.638 3.25.059 1.274.072 1.654.072 4.858s-.013 3.584-.072 4.858c-.061 1.343-.284 2.396-.64 3.25-.385.914-.927 1.65-1.674 2.396-.748 1.25-1.484 1.8-2.398 2.186-.854.355-1.907.577-3.25.638-1.274.059-1.654.072-4.858.072s-3.584-.013-4.858-.072c-1.343-.061-2.396-.284-3.25-.64-.914-.385-1.65-.927-2.396-1.674-.748-1.25-1.29-1.986-1.674-2.398-.355-.854-.577-1.907-.638-3.25-.059-1.274-.072-1.654-.072-4.858s.013-3.584.072-4.858c.061-1.343.284-2.396.64-3.25.385-.914.927-1.65 1.674-2.396.748-1.25 1.484-1.8 2.398-2.186.854-.355 1.907-.577 3.25-.638 1.274-.059 1.654-.072 4.858-.072zm0-2.163c-3.259 0-3.66.012-4.947.071-1.365.061-2.457.284-3.32.641-.93.39-1.7.933-2.52 1.753-1.64 1.64-1.64 4.305 0 5.945.82.82 1.564 1.59 2.52 1.753.863.357 1.955.58 3.32.641 1.287.059 1.688.071 4.947.071s3.66-.012 4.947-.071c1.365-.061 2.457-.284 3.32-.641.93-.39 1.7-.933 2.52-1.753 1.64-1.64 1.64-4.305 0-5.945-.82-.82-1.564-1.59-2.52-1.753-.863-.357-1.955-.58-3.32-.641-1.287-.059-1.688-.071-4.947-.071zM12 8.42c-2.094 0-3.79 1.696-3.79 3.79s1.696 3.79 3.79 3.79 3.79-1.696 3.79-3.79-1.696-3.79-3.79-3.79zm0 6.16c-1.287 0-2.33-1.043-2.33-2.33s1.043-2.33 2.33-2.33 2.33 1.043 2.33 2.33-1.043 2.33-2.33 2.33z"/>
+                    </svg>
+                </a>
+                <a href="#" class="text-gray-500 hover:text-indigo-600 transition duration-300">
+                    <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10-10-4.477-10-10 4.477-10 10-10zm0 1c-.823 0-1.55.677-1.55 1.5s.677 1.5 1.55 1.5 1.55-.677 1.55-1.5-.677-1.5-1.55-1.5zm0 3c-3.137 0-5.694 2.557-5.694 5.694 0 1.57.653 2.99 1.706 4.026l-1.42 1.42.001.002c-.067.067-.067.176 0 .243.067.067.176.067.243 0l1.42-1.42c1.036 1.053 2.456 1.706 4.026 1.706 3.137 0 5.694-2.557 5.694-5.694 0-3.137-2.557-5.694-5.694-5.694zm0 2.5c2.062 0 3.738 1.676 3.738 3.738s-1.676 3.738-3.738 3.738-3.738-1.676-3.738-3.738 1.676-3.738 3.738-3.738z"/>
+                    </svg>
+                </a>
+                <a href="#" class="text-gray-500 hover:text-indigo-600 transition duration-300">
+                    <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 2C6.477 2 2 6.477 2 12c0 4.417 2.864 8.165 6.843 9.488.471.086.643-.205.643-.457V19.46c-2.782.607-3.366-1.34-3.366-1.34-.455-1.155-1.11-1.464-1.11-1.464-.91-.618.069-.607.069-.607 1.002.07 1.53.515 1.53.515.89 1.53 2.33 1.084 2.9.829.091-.643.348-1.084.634-1.336-2.22-.252-4.555-1.11-4.555-4.945 0-1.09.39-2.022 1.03-2.73-.103-.252-.447-1.29.097-2.684 0 0 .84-.27 2.75 1.026.798-.222 1.637-.333 2.484-.338.847.005 1.686.116 2.484.338 1.91-1.296 2.75-1.026 2.75-1.026.544 1.394.2 2.432.097 2.684.64.708 1.03 1.64 1.03 2.73 0 3.844-2.335 4.693-4.562 4.938.358.308.677.92.677 1.854V21.1c0 .252.172.543.643.457C19.136 20.165 22 16.417 22 12c0-5.523-4.477-10-10-10z"/>
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-400 py-6 text-center">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2025 Musab Yagoub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu toggle -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>
